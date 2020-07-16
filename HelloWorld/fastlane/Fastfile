@@ -11,4 +11,12 @@ platform :ios do
       itc_team_name: "THE_NAME_OF_YOUR_APP_STORE_CONNECT_TEAM"
     )
   end
+
+  lane :create_development_cert do
+    cert(
+      username: "APPLE_ID",
+      team_name: "THE_NAME_OF_YOUR_DEVELOPER_PORTAL_TEAM",
+      development: true
+    )
+  end
 end

@@ -21,6 +21,11 @@ or alternatively using `brew install fastlane`
 fastlane ios register_app
 ```
 
+### ios create_development_cert
+```
+fastlane ios create_development_cert
+```
+
 
 ----
 
