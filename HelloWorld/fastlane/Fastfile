@@ -19,4 +19,13 @@ platform :ios do
       development: true
     )
   end
+
+  lane :get_provisioning_profile do
+    sigh(
+      username: "APPLE_ID",
+      team_name: "THE_NAME_OF_YOUR_DEVELOPER_PORTAL_TEAM",
+      app_identifier: "com.ithree1113.HelloWorld"
+    )
+  end
+
 end
