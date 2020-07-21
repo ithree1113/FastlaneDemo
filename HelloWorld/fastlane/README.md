@@ -31,6 +31,11 @@ fastlane ios create_development_cert
 fastlane ios get_provisioning_profile
 ```
 
+### ios get_dev_certs
+```
+fastlane ios get_dev_certs
+```
+
 
 ----
 

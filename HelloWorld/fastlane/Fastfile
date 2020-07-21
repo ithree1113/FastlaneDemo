@@ -3,29 +3,19 @@ default_platform(:ios)
 platform :ios do
 
   lane :register_app do
-    produce(
-      username: "APPLE_ID",
-      app_identifier: "com.ithree1113.HelloWorld", # Bundle ID
-      app_name: "ithreeHelloWorld",
-      team_name: "THE_NAME_OF_YOUR_DEVELOPER_PORTAL_TEAM",
-      itc_team_name: "THE_NAME_OF_YOUR_APP_STORE_CONNECT_TEAM"
-    )
+    produce(app_name: "ithreeHelloWorld")
   end
 
   lane :create_development_cert do
-    cert(
-      username: "APPLE_ID",
-      team_name: "THE_NAME_OF_YOUR_DEVELOPER_PORTAL_TEAM",
-      development: true
-    )
+    cert(development: true)
   end
 
-  lane :get_provisioning_profile do
-    sigh(
-      username: "APPLE_ID",
-      team_name: "THE_NAME_OF_YOUR_DEVELOPER_PORTAL_TEAM",
-      app_identifier: "com.ithree1113.HelloWorld"
-    )
+  lane :get_development_provisioning_profile do
+    sigh(development: true)
   end
 
+  lane :get_dev_certs do
+    create_development_cert
+    get_development_provisioning_profile
+  end
 end
