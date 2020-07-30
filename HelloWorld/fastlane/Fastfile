@@ -6,7 +6,7 @@ platform :ios do
     produce(app_name: "ithreeHelloWorld")
   end
 
-  lane :create_development_cert do
+  lane :get_development_cert do
     cert(development: true)
   end
 
@@ -15,7 +15,7 @@ platform :ios do
   end
 
   lane :get_dev_certs do
-    create_development_cert
+    get_development_cert
     get_development_provisioning_profile
   end
 
