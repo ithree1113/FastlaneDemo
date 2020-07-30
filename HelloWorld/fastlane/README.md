@@ -26,14 +26,24 @@ fastlane ios register_app
 fastlane ios create_development_cert
 ```
 
-### ios get_provisioning_profile
+### ios get_development_provisioning_profile
 ```
-fastlane ios get_provisioning_profile
+fastlane ios get_development_provisioning_profile
 ```
 
 ### ios get_dev_certs
 ```
 fastlane ios get_dev_certs
+```
+
+### ios sync_all_development
+```
+fastlane ios sync_all_development
+```
+
+### ios sync_device_info
+```
+fastlane ios sync_device_info
 ```
 
 

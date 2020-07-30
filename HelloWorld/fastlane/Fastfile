@@ -18,4 +18,23 @@ platform :ios do
     create_development_cert
     get_development_provisioning_profile
   end
+
+  lane :sync_all_development do
+    match(type: "development")
+  end
+
+  lane :sync_device_info do
+    register_devices(
+      devices:{
+        "ithree iPhone XS" => "UUID"
+      }
+    )
+  end
+
+  lane :bootstrap_code_signing do
+    sync_device_info
+    match(type: "development")
+    match(type: "adhoc")
+    match(type: "appstore")
+  end
 end
