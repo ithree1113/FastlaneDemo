@@ -19,14 +19,17 @@ platform :ios do
     get_development_provisioning_profile
   end
 
+  desc "Sync team Development assets"
   lane :sync_all_development do
+    sync_device_info
     match(type: "development")
   end
 
+  desc "Update iOS UDUD's on Developer Portal"
   lane :sync_device_info do
     register_devices(
       devices:{
-        "ithree iPhone XS" => "UUID"
+        devices_file: "fastlane/Devicefile.txt"
       }
     )
   end

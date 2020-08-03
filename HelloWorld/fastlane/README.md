@@ -21,9 +21,9 @@ or alternatively using `brew install fastlane`
 fastlane ios register_app
 ```
 
-### ios create_development_cert
+### ios get_development_cert
 ```
-fastlane ios create_development_cert
+fastlane ios get_development_cert
 ```
 
 ### ios get_development_provisioning_profile
@@ -40,10 +40,15 @@ fastlane ios get_dev_certs
 ```
 fastlane ios sync_all_development
 ```
-
+Sync team Development assets
 ### ios sync_device_info
 ```
 fastlane ios sync_device_info
+```
+Update iOS UDUD's on Developer Portal
+### ios bootstrap_code_signing
+```
+fastlane ios bootstrap_code_signing
 ```
 
 
