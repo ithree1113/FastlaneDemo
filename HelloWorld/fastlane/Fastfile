@@ -14,9 +14,20 @@ platform :ios do
     sigh(development: true)
   end
 
+  lane :get_adhoc_provisioning_profile do
+    sigh(adhoc: true)
+  end
+
   lane :get_dev_certs do
     get_development_cert
     get_development_provisioning_profile
+  end
+
+  desc "Update iOS UDUD's on Developer Portal"
+  lane :sync_device_info do
+    register_devices(
+      devices_file: "fastlane/Devicefile"
+    )
   end
 
   desc "Sync team Development assets"
@@ -25,13 +36,11 @@ platform :ios do
     match(type: "development")
   end
 
-  desc "Update iOS UDUD's on Developer Portal"
-  lane :sync_device_info do
-    register_devices(
-      devices:{
-        devices_file: "fastlane/Devicefile.txt"
-      }
-    )
+  desc "Sync team Code-Signing assets"
+  lane :sync_signing_assets do |options|
+    sync_device_info
+    selectedType = options[:type]
+    match(type: selectedType)
   end
 
   lane :bootstrap_code_signing do
@@ -39,5 +48,28 @@ platform :ios do
     match(type: "development")
     match(type: "adhoc")
     match(type: "appstore")
+  end
+
+  desc "Build for App Store submission"
+  lane :build_appstore do
+    sync_signing_assets(type: "appstore")
+    gym(
+      output_directory: "build_Appstore",
+      export_method: "app-store"
+    )
+  end
+
+  desc "Build for Ad Hoc submission"
+  lane :build_adhoc do
+    sync_signing_assets(type: "adhoc")
+    gym(
+      output_directory: "build_AdHoc",
+      export_method: "ad-hoc",
+      export_options: {
+        provisioningProfiles: {
+          "Bundle ID" => "Provisioning Profile Name"
+        }
+      }
+    )
   end
 end

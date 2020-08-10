@@ -31,26 +31,46 @@ fastlane ios get_development_cert
 fastlane ios get_development_provisioning_profile
 ```
 
+### ios get_adhoc_provisioning_profile
+```
+fastlane ios get_adhoc_provisioning_profile
+```
+
 ### ios get_dev_certs
 ```
 fastlane ios get_dev_certs
 ```
 
-### ios sync_all_development
-```
-fastlane ios sync_all_development
-```
-Sync team Development assets
 ### ios sync_device_info
 ```
 fastlane ios sync_device_info
 ```
 Update iOS UDUD's on Developer Portal
+### ios sync_all_development
+```
+fastlane ios sync_all_development
+```
+Sync team Development assets
+### ios sync_signing_assets
+```
+fastlane ios sync_signing_assets
+```
+Sync team Code-Signing assets
 ### ios bootstrap_code_signing
 ```
 fastlane ios bootstrap_code_signing
 ```
 
+### ios build_appstore
+```
+fastlane ios build_appstore
+```
+Build for App Store submission
+### ios build_adhoc
+```
+fastlane ios build_adhoc
+```
+Build for Ad Hoc submission
 
 ----
 
