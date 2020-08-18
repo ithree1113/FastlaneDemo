@@ -5,32 +5,12 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.000365">
+      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.000354">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="1: Switch to ios sync_signing_assets lane" time="0.00025">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="2: Switch to ios sync_device_info lane" time="0.000147">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="3: register_devices" time="4.516183">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="4: match" time="11.849099">
-        
-      </testcase>
-    
-      
-      <testcase classname="fastlane.lanes" name="5: gym" time="42.186838">
+      <testcase classname="fastlane.lanes" name="1: pilot" time="130.406837">
         
       </testcase>
     

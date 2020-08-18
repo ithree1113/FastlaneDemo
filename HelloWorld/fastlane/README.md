@@ -71,6 +71,11 @@ Build for App Store submission
 fastlane ios build_adhoc
 ```
 Build for Ad Hoc submission
+### ios pilot_lane
+```
+fastlane ios pilot_lane
+```
+
 
 ----
 

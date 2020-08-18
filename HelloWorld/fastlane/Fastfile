@@ -2,6 +2,7 @@ default_platform(:ios)
 
 platform :ios do
 
+
   lane :register_app do
     produce(app_name: "ithreeHelloWorld")
   end
@@ -71,5 +72,9 @@ platform :ios do
         }
       }
     )
+  end
+
+  lane :pilot_lane do
+    pilot(ipa: "build_Appstore/HelloWorld.ipa")
   end
 end
