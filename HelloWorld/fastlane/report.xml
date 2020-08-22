@@ -5,12 +5,52 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.000354">
+      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.000347">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="1: pilot" time="130.406837">
+      <testcase classname="fastlane.lanes" name="1: Switch to ios build_appstore lane" time="0.000237">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="2: Switch to ios sync_signing_assets lane" time="0.000172">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="3: Switch to ios sync_device_info lane" time="0.000137">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="4: register_devices" time="4.137611">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="5: match" time="7.627415">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="6: increment_build_number" time="0.979274">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="7: gym" time="30.29043">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="8: Switch to ios pilot_lane lane" time="0.000193">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="9: pilot" time="241.988693">
         
       </testcase>
     

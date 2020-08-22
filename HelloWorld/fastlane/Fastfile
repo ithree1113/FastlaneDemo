@@ -54,6 +54,7 @@ platform :ios do
   desc "Build for App Store submission"
   lane :build_appstore do
     sync_signing_assets(type: "appstore")
+    increment_build_number
     gym(
       output_directory: "build_Appstore",
       export_method: "app-store"
@@ -63,6 +64,7 @@ platform :ios do
   desc "Build for Ad Hoc submission"
   lane :build_adhoc do
     sync_signing_assets(type: "adhoc")
+    increment_build_number
     gym(
       output_directory: "build_AdHoc",
       export_method: "ad-hoc",
@@ -76,5 +78,10 @@ platform :ios do
 
   lane :pilot_lane do
     pilot(ipa: "build_Appstore/HelloWorld.ipa")
+  end
+
+  lane :distribute_to_appstore do
+    build_appstore
+    pilot_lane
   end
 end

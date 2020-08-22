@@ -76,6 +76,11 @@ Build for Ad Hoc submission
 fastlane ios pilot_lane
 ```
 
+### ios distribute_to_appstore
+```
+fastlane ios distribute_to_appstore
+```
+
 
 ----
 
