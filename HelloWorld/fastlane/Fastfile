@@ -77,7 +77,10 @@ platform :ios do
   end
 
   lane :pilot_lane do
-    pilot(ipa: "build_Appstore/HelloWorld.ipa")
+    pilot(
+      ipa: "build_Appstore/HelloWorld.ipa",
+      changlog: "Version {lane_context[sharedValues::VERSION_NUMBER]}, Build {lane_context[sharedValues::BUILD_NUMBER]}"
+    )
   end
 
   lane :distribute_to_appstore do
