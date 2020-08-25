@@ -81,6 +81,11 @@ fastlane ios pilot_lane
 fastlane ios distribute_to_appstore
 ```
 
+### ios release
+```
+fastlane ios release
+```
+
 
 ----
 

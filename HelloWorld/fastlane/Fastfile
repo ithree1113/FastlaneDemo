@@ -87,4 +87,8 @@ platform :ios do
     build_appstore
     pilot_lane
   end
+
+  lane :release do
+    precheck
+  end
 end
