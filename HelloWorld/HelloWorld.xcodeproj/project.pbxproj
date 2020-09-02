@@ -13,7 +13,19 @@
 		2C498EDF24BCBC2400699419 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C498EDD24BCBC2400699419 /* Main.storyboard */; };
 		2C498EE124BCBC2600699419 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C498EE024BCBC2600699419 /* Assets.xcassets */; };
 		2C498EE424BCBC2600699419 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C498EE224BCBC2600699419 /* LaunchScreen.storyboard */; };
+		2CF66B8B24FE925000A40BF7 /* FastlaneSnapshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF66B8A24FE925000A40BF7 /* FastlaneSnapshots.swift */; };
+		2CF66B9324FE93D600A40BF7 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF66B9224FE93D600A40BF7 /* SnapshotHelper.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2CF66B8D24FE925000A40BF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2C498ECC24BCBC2400699419 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C498ED324BCBC2400699419;
+			remoteInfo = HelloWorld;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		2C498ED424BCBC2400699419 /* HelloWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,10 +36,21 @@
 		2C498EE024BCBC2600699419 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C498EE324BCBC2600699419 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C498EE524BCBC2600699419 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CF66B8824FE925000A40BF7 /* FastlaneSnapshots.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FastlaneSnapshots.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CF66B8A24FE925000A40BF7 /* FastlaneSnapshots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastlaneSnapshots.swift; sourceTree = "<group>"; };
+		2CF66B8C24FE925000A40BF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CF66B9224FE93D600A40BF7 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		2C498ED124BCBC2400699419 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CF66B8524FE925000A40BF7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				2C498ED624BCBC2400699419 /* HelloWorld */,
+				2CF66B8924FE925000A40BF7 /* FastlaneSnapshots */,
 				2C498ED524BCBC2400699419 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				2C498ED424BCBC2400699419 /* HelloWorld.app */,
+				2CF66B8824FE925000A40BF7 /* FastlaneSnapshots.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -65,6 +90,16 @@
 				2C498EE524BCBC2600699419 /* Info.plist */,
 			);
 			path = HelloWorld;
+			sourceTree = "<group>";
+		};
+		2CF66B8924FE925000A40BF7 /* FastlaneSnapshots */ = {
+			isa = PBXGroup;
+			children = (
+				2CF66B9224FE93D600A40BF7 /* SnapshotHelper.swift */,
+				2CF66B8A24FE925000A40BF7 /* FastlaneSnapshots.swift */,
+				2CF66B8C24FE925000A40BF7 /* Info.plist */,
+			);
+			path = FastlaneSnapshots;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,18 +122,40 @@
 			productReference = 2C498ED424BCBC2400699419 /* HelloWorld.app */;
 			productType = "com.apple.product-type.application";
 		};
+		2CF66B8724FE925000A40BF7 /* FastlaneSnapshots */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CF66B9124FE925000A40BF7 /* Build configuration list for PBXNativeTarget "FastlaneSnapshots" */;
+			buildPhases = (
+				2CF66B8424FE925000A40BF7 /* Sources */,
+				2CF66B8524FE925000A40BF7 /* Frameworks */,
+				2CF66B8624FE925000A40BF7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2CF66B8E24FE925000A40BF7 /* PBXTargetDependency */,
+			);
+			name = FastlaneSnapshots;
+			productName = FastlaneSnapshots;
+			productReference = 2CF66B8824FE925000A40BF7 /* FastlaneSnapshots.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		2C498ECC24BCBC2400699419 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1150;
+				LastSwiftUpdateCheck = 1160;
 				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = EddieCheng;
 				TargetAttributes = {
 					2C498ED324BCBC2400699419 = {
 						CreatedOnToolsVersion = 11.5;
+					};
+					2CF66B8724FE925000A40BF7 = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 2C498ED324BCBC2400699419;
 					};
 				};
 			};
@@ -116,6 +173,7 @@
 			projectRoot = "";
 			targets = (
 				2C498ED324BCBC2400699419 /* HelloWorld */,
+				2CF66B8724FE925000A40BF7 /* FastlaneSnapshots */,
 			);
 		};
 /* End PBXProject section */
@@ -128,6 +186,13 @@
 				2C498EE424BCBC2600699419 /* LaunchScreen.storyboard in Resources */,
 				2C498EE124BCBC2600699419 /* Assets.xcassets in Resources */,
 				2C498EDF24BCBC2400699419 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CF66B8624FE925000A40BF7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,7 +209,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2CF66B8424FE925000A40BF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CF66B8B24FE925000A40BF7 /* FastlaneSnapshots.swift in Sources */,
+				2CF66B9324FE93D600A40BF7 /* SnapshotHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2CF66B8E24FE925000A40BF7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2C498ED324BCBC2400699419 /* HelloWorld */;
+			targetProxy = 2CF66B8D24FE925000A40BF7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		2C498EDD24BCBC2400699419 /* Main.storyboard */ = {
@@ -320,6 +402,46 @@
 			};
 			name = Release;
 		};
+		2CF66B8F24FE925000A40BF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UG6S92QCHF;
+				INFOPLIST_FILE = FastlaneSnapshots/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ithree1113.FastlaneSnapshots;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HelloWorld;
+			};
+			name = Debug;
+		};
+		2CF66B9024FE925000A40BF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UG6S92QCHF;
+				INFOPLIST_FILE = FastlaneSnapshots/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ithree1113.FastlaneSnapshots;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HelloWorld;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -337,6 +459,15 @@
 			buildConfigurations = (
 				2C498EE924BCBC2600699419 /* Debug */,
 				2C498EEA24BCBC2600699419 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2CF66B9124FE925000A40BF7 /* Build configuration list for PBXNativeTarget "FastlaneSnapshots" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CF66B8F24FE925000A40BF7 /* Debug */,
+				2CF66B9024FE925000A40BF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

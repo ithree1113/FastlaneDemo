@@ -90,5 +90,6 @@ platform :ios do
 
   lane :release do
     precheck
+    snapshot
   end
 end
